@@ -1,0 +1,38 @@
+<suite name="ConcertoFrameworkDevelopment" verbose="1" parallel="tests"
+	thread-count="1" configfailurepolicy="skip" preserve-order="true">
+	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners">
+		</listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener -->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>
+
+    <test name="Ticket Creation and AD" preserve-order="true">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="API" />	
+        		</run>	
+     </groups>	
+        <classes>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSLogin"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSForgotPassword"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.SelectClient"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSPanelOutgoingCommands"/>           
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSCameraStatus"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.SelectPanelId"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSUpdateMACID"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSBlacklistedZones"/>
+            <!-- <class name="com.concerto.cams.test.scenarios.insmobapi.INSPanelCommunication"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus"/>
+            <class name="com.concerto.cams.test.scenarios.insmobapi.INSPanelTracking"/> -->
+        </classes>
+    </test>
+</suite>

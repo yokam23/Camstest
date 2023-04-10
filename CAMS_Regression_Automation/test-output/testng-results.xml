@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="ConcertoFrameworkDevelopment" duration-ms="1892" started-at="2020-12-31T13:41:56Z" finished-at="2020-12-31T13:41:58Z">
+    <groups>
+      <group name="API">
+        <method signature="INSSensorStatus.ValidateSensorStatus(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="ValidateSensorStatus" class="com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus"/>
+      </group> <!-- API -->
+    </groups>
+    <test name="Ticket Creation and AD" duration-ms="1892" started-at="2020-12-31T13:41:56Z" finished-at="2020-12-31T13:41:58Z">
+      <class name="com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus">
+        <test-method status="FAIL" signature="InitiateSuite()[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="InitiateSuite" is-config="true" duration-ms="0" started-at="2020-12-31T19:11:56Z" finished-at="2020-12-31T19:11:56Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.apache.poi.poifs.nio.ByteArrayBackedDataSource.copyTo(ByteArrayBackedDataSource.java:86)
+	at org.apache.poi.poifs.filesystem.NPOIFSFileSystem.writeFilesystem(NPOIFSFileSystem.java:798)
+	at org.apache.poi.hssf.usermodel.HSSFWorkbook.write(HSSFWorkbook.java:1415)
+	at com.concerto.common.utilities.DataProviderWriter.setTestData(DataProviderWriter.java:201)
+	at com.concerto.cams.common.dataprep.ProjectDataProviderData.SetDataProviderDataFeeProfile(ProjectDataProviderData.java:14)
+	at com.concerto.cams.common.dataprep.AllData.generateData(AllData.java:12)
+	at com.concerto.common.BaseClass.InitiateSuite(BaseClass.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitiateSuite -->
+        <test-method status="SKIP" signature="InitiateClassAPI(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="InitiateClassAPI" is-config="true" duration-ms="0" started-at="2020-12-31T19:11:56Z" finished-at="2020-12-31T19:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InitiateClassAPI -->
+        <test-method status="PASS" signature="initiateTest()[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="initiateTest" is-config="true" duration-ms="76" started-at="2020-12-31T19:11:56Z" finished-at="2020-12-31T19:11:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiateTest -->
+        <test-method status="FAIL" signature="TeardownTest(java.lang.String, org.testng.ITestResult)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="TeardownTest" is-config="true" duration-ms="0" started-at="2020-12-31T19:11:56Z" finished-at="2020-12-31T19:11:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[TestResult name=ValidateSensorStatus status=SKIP method=INSSensorStatus.ValidateSensorStatus(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.concerto.common.BaseClass.TeardownTest(BaseClass.java:121)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:709)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeardownTest -->
+        <test-method status="SKIP" signature="TeardownClassAPI(java.lang.String)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="TeardownClassAPI" is-config="true" duration-ms="0" started-at="2020-12-31T19:11:58Z" finished-at="2020-12-31T19:11:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeardownClassAPI -->
+        <test-method status="FAIL" signature="CompleteSuite(org.testng.ITestContext)[pri:0, instance:com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus@d83da2e]" name="CompleteSuite" is-config="true" duration-ms="0" started-at="2020-12-31T19:11:58Z" finished-at="2020-12-31T19:11:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7674f035]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA[com.concerto.common.reports.ExcelReport.CreateFailureMap()Ljava/util/List;]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: com.concerto.common.reports.ExcelReport.CreateFailureMap()Ljava/util/List;
+	at com.concerto.common.BaseClass.CompleteSuite(BaseClass.java:206)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:514)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:215)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:336)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CompleteSuite -->
+      </class> <!-- com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus -->
+    </test> <!-- Ticket Creation and AD -->
+  </suite> <!-- ConcertoFrameworkDevelopment -->
+</testng-results>

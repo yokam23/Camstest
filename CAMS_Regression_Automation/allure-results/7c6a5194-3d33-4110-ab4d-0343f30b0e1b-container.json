@@ -1,0 +1,1 @@
+{"uuid":"7c6a5194-3d33-4110-ab4d-0343f30b0e1b","name":"com.concerto.vegaah.test.scenarios.login.UrwayLogin.initiateTest","description":"","start":1597759224521,"stop":1597759225029,"children":["07696740-8dcb-4b36-a45d-e58f428af349"],"befores":[{"name":"initiateTest","status":"passed","stage":"finished","description":"","start":1597759224521,"stop":1597759225028}]}

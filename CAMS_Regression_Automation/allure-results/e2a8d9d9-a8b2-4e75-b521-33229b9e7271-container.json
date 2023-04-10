@@ -1,0 +1,1 @@
+{"uuid":"e2a8d9d9-a8b2-4e75-b521-33229b9e7271","name":"com.concerto.common.BaseClass.TeardownTest","description":"","start":1590693564793,"stop":1590693564861,"children":["a3a3ec3f-b4a7-4b07-a50e-a8d8d5ae0087"],"afters":[{"name":"TeardownTest","status":"passed","stage":"finished","description":"","start":1590693564793,"stop":1590693564861}]}

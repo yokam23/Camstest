@@ -1,0 +1,45 @@
+<suite name="CAMS ALert Tests" verbose="1" parallel="tests" thread-count="1" configfailurepolicy="skip" preserve-order="true">
+    	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners"> </listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener-->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>    
+	<test name="Report Verification Tests" preserve-order="true">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="API" />	
+        		</run>	
+     </groups>	
+        <classes>
+            <class name="com.concerto.cams.test.scenarios.reader.ValidateTicketAllocation"/>
+            <class name="com.concerto.cams.test.scenarios.reader.ValidateTicketRestoral"/>
+            <class name="com.concerto.cams.test.scenarios.reader.BlacklistZones"/>
+        </classes>
+    </test>
+	
+    <test name="Excel Report Verification Tests" preserve-order="true">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="UI" />	
+        		</run>	
+     </groups>	
+        <classes>
+            <class name="com.concerto.cams.test.scenarios.reader.ValidateTicketTransaction"/>
+            <class name="com.concerto.cams.test.scenarios.reader.ValidateADImage"/>
+            <class name="com.concerto.cams.test.scenarios.reports.PanelReports"/>
+            <class name="com.concerto.cams.test.scenarios.reports.BranchReports"/>
+        </classes>
+    </test>
+</suite>

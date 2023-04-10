@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [ConcertoFrameworkDevelopment]" parallel="tests">
+  <parameter name="RunEnv" value="localhost"/>
+  <parameter name="Port" value="4444"/>
+  <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+  <parameter name="Browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.concerto.common.listeners.SuiteListeners"/>
+    <listener class-name="com.concerto.common.listeners.TestListeners"/>
+    <listener class-name="com.concerto.common.listeners.CustomReporter"/>
+    <listener class-name="com.concerto.common.listeners.ListenerAdapter"/>
+  </listeners>
+  <test name="Ticket Creation and AD">
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="Port" value="4444"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Browser" value="Chrome"/>
+    <groups>
+      <run>
+        <include name="API"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.concerto.cams.test.scenarios.insmobapi.INSSensorStatus"/>
+    </classes>
+  </test> <!-- Ticket Creation and AD -->
+</suite> <!-- Failed suite [ConcertoFrameworkDevelopment] -->

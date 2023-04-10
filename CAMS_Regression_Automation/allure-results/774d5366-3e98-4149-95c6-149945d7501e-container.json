@@ -1,0 +1,1 @@
+{"uuid":"774d5366-3e98-4149-95c6-149945d7501e","name":"com.concerto.vegaah.test.scenarios.apiTransactions.AddTokenization.initiateTest","description":"","start":1597910908609,"stop":1597910908631,"children":["7cf1710e-6698-49d5-8564-be45842d9642"],"befores":[{"name":"initiateTest","status":"passed","stage":"finished","description":"","start":1597910908609,"stop":1597910908630}]}

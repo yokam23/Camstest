@@ -1,0 +1,68 @@
+<suite name="ConcertoFrameworkDevelopment" verbose="1" parallel="tests" thread-count="2" configfailurepolicy="skip" preserve-order="true">
+    	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners"> </listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener-->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>
+    
+    <test name="Reader Tests">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="UI" />	
+        		</run>	
+     </groups>	
+        <classes>
+           <class name="com.concerto.vegaah.test.scenarios.apiTransactions.PartialTransPGHosted"/>
+       <class name="com.concerto.vegaah.test.scenarios.apiTransactions.AddTokenization"/> 
+          <class name="com.concerto.vegaah.test.scenarios.apiTransactions.UpdateTokenization"/> 
+          <class name="com.concerto.vegaah.test.scenarios.apiTransactions.DeleteTokenization"/> 
+       <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CustomerNotPresentTrans"/>
+           <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CustomerPresentTrans"/> 
+           <class name="com.concerto.vegaah.test.scenarios.apiTransactions.PartialTransPGHosted"/> 
+        <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CardLessTransPGHosted"/>
+          <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CardLessTransDirect"/> 
+  
+             <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CardedTransPGHosted"/> 
+              <class name="com.concerto.vegaah.test.scenarios.apiTransactions.PGHostedRelativeTrans"/> 
+              <class name="com.concerto.vegaah.test.scenarios.apiTransactions.VoidRefund"/> 
+          
+            <class name="com.concerto.vegaah.test.scenarios.apiTransactions.TransactionInquiry"/> 
+        <class name="com.concerto.vegaah.test.scenarios.administartor.AddAndApproveUser"/>
+            <class name="com.concerto.vegaah.test.scenarios.profile.AddPasswordProfile"/> 
+            <class name="com.concerto.vegaah.test.scenarios.profile.AddLayoutProfile"/>  
+            <class name="com.concerto.vegaah.test.scenarios.profile.AddCurrencyProfile"/>  
+             <class name="com.concerto.vegaah.test.scenarios.profile.AddTransactionProfile"/> 
+             <class name="com.concerto.vegaah.test.scenarios.profile.AddFeeProfileUrway"/>  
+               <class name="com.concerto.vegaah.test.scenarios.profile.AddVelocityProfile"/> 
+              <class name="com.concerto.vegaah.test.scenarios.administartor.AddAndVerifyInstitution"/>  
+               <class name="com.concerto.vegaah.test.scenarios.administartor.AddMerchantUrway"/> 
+                <class name="com.concerto.vegaah.test.scenarios.administartor.AddTerminalUrwayMer"/> 
+              <class name="com.concerto.vegaah.test.scenarios.administartor.AddTerminalUrway"/> 
+            <class name="com.concerto.vegaah.test.scenarios.TransactionDetails.TestQuickView"/>  
+               <class name="com.concerto.vegaah.test.scenarios.TransactionDetails.TestDeclineStatistic"/>  
+                 <class name="com.concerto.vegaah.test.scenarios.TransactionDetails.TestStatistic"/>
+                  <class name="com.concerto.vegaah.test.scenarios.TransactionDetails.TestTransactionMonitor"/>
+           <class name="com.concerto.vegaah.test.scenarios.apiTransactions.CardedTransDirect"/> 
+          
+                   <class name="com.concerto.vegaah.test.scenarios.apiTransactions.StandAloneRefundPGHosted"/>  
+                    <class name="com.concerto.vegaah.test.scenarios.apiTransactions.RecurringTransationPgHosted"/>  
+          <!-- <class name="com.concerto.vegaah.test.scenarios.login.UrwayLogin"/> -->
+          <!--class name="com.concerto.vegaah.test.scenarios.login.ValidLogin"/-->
+        <!--class name="com.concerto.vegaah.test.scenarios.VegaahReports.GenerateTransactionReports"/-->   
+        <!--   <class name="com.concerto.vegaah.test.scenarios.JoomlaTransactionTest.JoomlaTransaction"/>  -->
+          <!--   <class name="com.concerto.vegaah.test.scenarios.OpenCartTransactionTest.OpenCartTransaction"/> -->
+           <!--  <class name="com.concerto.vegaah.test.scenarios.PrestaShopTransactionTest.PrestaShopTransaction"/> -->
+            <!--class name="com.concerto.vegaah.test.scenarios.VegaahReports.TransactionReports"/-->
+            <!--class name="com.concerto.vegaah.test.scenarios.virtuemartTransactionTest.VirtueMartTransaction"/-->
+         <!-- <class name="com.concerto.vegaah.test.scenarios.MagentoTransactionTest.MagentoTransaction"/> -->            
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,150 @@
+<suite name="CAMS Config and Master" verbose="1" parallel="tests"
+	thread-count="1" configfailurepolicy="skip" preserve-order="true">
+	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners">
+		</listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener -->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>
+
+    <test name="Master" preserve-order="true">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="UI" />	
+        		</run>	
+     </groups>	
+        <classes>
+		     <class name="com.concerto.cams.test.scenarios.master.AddCity" /> 
+			<class name="com.concerto.cams.test.scenarios.master.EditCity" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteCity" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddNationalHoliday" />
+		    <class name="com.concerto.cams.test.scenarios.master.EditNationalHoliday" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteNationalHolidayDetails" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddOperatorCmnt" />
+			<class name="com.concerto.cams.test.scenarios.master.EditOperatorCmt" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteOperatorCmt" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddSensors" />
+		    <class name="com.concerto.cams.test.scenarios.master.EditSensorDetails" />
+		 <class name="com.concerto.cams.test.scenarios.master.DeleteSensordetails" />  
+
+		    <class name="com.concerto.cams.test.scenarios.master.AddManufacturer" /> 
+			 <class name="com.concerto.cams.test.scenarios.master.EditManufacturer" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteManufacturer" />
+
+		    <class name="com.concerto.cams.test.scenarios.master.AddMakeModel" />
+
+		    <class name="com.concerto.cams.test.scenarios.master.AddDispatchVendor" />
+			<class name="com.concerto.cams.test.scenarios.master.EditDispatchVendor" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteDispatchVendor" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddPanelServiceVendor" />
+			<class name="com.concerto.cams.test.scenarios.master.EditPanelServiceVendor" />
+			<class name="com.concerto.cams.test.scenarios.master.DeletePanelServiceVendor" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddShift" />
+			<class name="com.concerto.cams.test.scenarios.master.EditShift" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteShift" />
+
+		    <class name="com.concerto.cams.test.scenarios.master.AddCRAAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.EditCRAAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteCRAAgency" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddHKAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.EditHKdetails" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteHKdetails" />
+
+			 <class name="com.concerto.cams.test.scenarios.master.AddMSPAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.EditMSPAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteMSPAgency" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddQRTAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.EditQRTdetails" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteQRTdetails" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddNetworkProvider" />
+			<class name="com.concerto.cams.test.scenarios.master.EditNetworkProvider" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteNetworkProvider" />
+
+			 <class name="com.concerto.cams.test.scenarios.master.AddInstallationPartner" />
+			<class name="com.concerto.cams.test.scenarios.master.EditInstallationPartner" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteInstallationPartner" />
+
+		    <class name="com.concerto.cams.test.scenarios.master.AddTerritory" />
+			<class name="com.concerto.cams.test.scenarios.master.EditTerritoryManager" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteTerritory" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddEscalationDetails" />
+			<class name="com.concerto.cams.test.scenarios.master.EditEscalationdetails" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteEscalationDetails" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddServicePartner" />
+			<class name="com.concerto.cams.test.scenarios.master.EditServicePartner" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteServicePartner" />
+
+			<class name="com.concerto.cams.test.scenarios.master.AddSubscription" />
+			<class name="com.concerto.cams.test.scenarios.master.EditSubscription" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteSubscription" />			
+        </classes>
+    </test>
+
+	<test name="Configuration" preserve-order="true">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="RunEnv" value="localhost" />
+		<parameter name="GRID_HUB_IP" value="10.10.11.83" />
+		<parameter name="Port" value="4444" />
+		<groups>
+			<run>
+				<include name="UI" />
+			</run>
+		</groups>
+		<classes>
+			<!-- <class name="com.concerto.cams.test.scenarios.login.InvalidLogin"/> -->
+			<!-- <class name="com.concerto.cams.test.scenarios.login.ValidLogin"/> -->
+
+			
+		    <class name="com.concerto.cams.test.scenarios.configuration.AddMasterTemplate"/>
+			
+			<class name="com.concerto.cams.test.scenarios.configuration.AddClient"/>
+			<class name="com.concerto.cams.test.scenarios.configuration.UpdateClient"/>
+			<class name="com.concerto.cams.test.scenarios.configuration.DeleteClient"/>
+			
+			 <class name="com.concerto.cams.test.scenarios.configuration.AddProject"/>
+			   
+             
+               <class name="com.concerto.cams.test.scenarios.configuration.AddProjectTeam"/>
+               <class name="com.concerto.cams.test.scenarios.configuration.UpdateProjectTeam"/>
+               <class name="com.concerto.cams.test.scenarios.configuration.DeleteProjectTeam"/>
+             
+               <class name="com.concerto.cams.test.scenarios.configuration.AddPanel"/>
+            
+              <class name="com.concerto.cams.test.scenarios.configuration.AddDealer"/>   
+             <class name="com.concerto.cams.test.scenarios.configuration.UpdateDealer"/>   
+             <class name="com.concerto.cams.test.scenarios.configuration.DeleteDealer"/>
+			
+			 <class name="com.concerto.cams.test.scenarios.configuration.AddCircle"/>
+			  <class name="com.concerto.cams.test.scenarios.configuration.UpdateCircle"/>
+			 <class name="com.concerto.cams.test.scenarios.configuration.DeleteCircle"/>
+			 <!-- <class name="com.concerto.cams.test.scenarios.user.Adduser"/>  -->
+			 
+			 <class name="com.concerto.cams.test.scenarios.configuration.TestToQuality"/> 
+               <!--<class name="com.concerto.cams.test.scenarios.configuration.QualityToLive"/>
+               <class name="com.concerto.cams.test.scenarios.configuration.LiveToService"/> 
+               <class name="com.concerto.cams.test.scenarios.configuration.ServiceToLive"/>-->
+               
+              <class name="com.concerto.cams.test.scenarios.master.DeleteUsedRecords"/> 
+ 
+		</classes>
+	</test>
+	
+</suite>

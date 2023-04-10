@@ -1,0 +1,1 @@
+{"uuid":"0326f96b-9ef6-4283-9de0-a91606627cc9","name":"com.concerto.vegaah.test.scenarios.apiTransactions.PartialTransPGHosted","start":1597929440378,"stop":1597929484348,"children":["ba7c5633-af93-41c9-ab0e-a7db348e83aa"],"befores":[{"name":"InitiateClassUI","status":"passed","stage":"finished","description":"","start":1597929440411,"stop":1597929451771}]}

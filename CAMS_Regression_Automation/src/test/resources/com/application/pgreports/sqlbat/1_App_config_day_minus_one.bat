@@ -1,0 +1,1 @@
+sqlcmd -Q " update  Application_Config set Param_Value= cast(dateadd(dd,-1,Param_Value) as date) where Param_Name  in('CURRENT_BUSINESS_DATE','PREVIOUS_BUSINESS_DATE','NEXT_BUSINESS_DATE')" -S "10.10.10.205" -U "sa" -P "sqlserver@1" -d "VegaaHAutomation"

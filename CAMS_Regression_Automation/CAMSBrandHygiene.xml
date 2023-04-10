@@ -1,0 +1,61 @@
+<suite name="CAMSBrandHygiene" verbose="1" parallel="tests"
+	thread-count="1" configfailurepolicy="skip" preserve-order="true">
+	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners">
+		</listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener -->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>
+
+   <test name="Master" preserve-order="true">
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="RunEnv" value="localhost"/>
+    <parameter name="GRID_HUB_IP" value="10.10.11.83"/>
+    <parameter name="Port" value="4444"/>
+    <groups>	
+				<run>	
+   					 <include name="UI" />	
+        		</run>	
+     </groups>	
+        <classes>
+			<class name="com.concerto.cams.test.scenarios.master.AddHKAgency" />
+			<class name="com.concerto.cams.test.scenarios.master.EditHKdetails" />
+			<class name="com.concerto.cams.test.scenarios.master.DeleteHKdetails" />			
+        </classes>
+    </test>
+	
+	   <test name="BrandHygiene" preserve-order="true">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="RunEnv" value="localhost" />
+		<parameter name="GRID_HUB_IP" value="10.10.11.83" />
+		<parameter name="Port" value="4444" />
+		<groups>
+			<run>
+				<include name="UI" />
+			</run>
+		</groups>
+		<classes>
+		
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.AddCameraLocation"/>    
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.EditCameraLocation"/>
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.DeleteCameraLocation"/>  
+             
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.AddSurveillanceIndicator"/>
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.EditSurveillanceIndicator"/>
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.DeleteSurveillanceIndicator"/>
+           
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.AddSiteConfiguration"/> 
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.EditSiteConfiguration"/> 
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.DeleteSiteConfiguration"/>
+             
+          <class name="com.concerto.cams.test.scenarios.brandhygiene.ViewScheduledMonitoring"/>    
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.ViewLatestMonitoring"/>        
+           <class name="com.concerto.cams.test.scenarios.brandhygiene.ViewOfficeMonitoringReport"/>        
+ 
+		</classes>
+	</test>
+</suite>

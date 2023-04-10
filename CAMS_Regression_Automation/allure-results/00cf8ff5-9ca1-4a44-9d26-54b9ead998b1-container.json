@@ -1,0 +1,1 @@
+{"uuid":"00cf8ff5-9ca1-4a44-9d26-54b9ead998b1","name":"com.concerto.vegaah.test.scenarios.profile.AddPasswordProfile.initiateTest","description":"","start":1597817282087,"stop":1597817282227,"children":["80586803-88c2-42ce-8d0b-8a2ab4d52c81"],"befores":[{"name":"initiateTest","status":"passed","stage":"finished","description":"","start":1597817282087,"stop":1597817282227}]}

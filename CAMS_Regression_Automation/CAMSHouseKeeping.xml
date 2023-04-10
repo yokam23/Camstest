@@ -1,0 +1,46 @@
+<suite name="CAMS HouseKeeping" verbose="1" parallel="tests"
+	thread-count="1" configfailurepolicy="skip" preserve-order="true">
+	<!-- RUNTIME CONFIG -->
+
+	<listeners>
+		<listener class-name="com.concerto.common.listeners.SuiteListeners">
+		</listener>
+		<listener class-name="com.concerto.common.listeners.TestListeners"></listener>
+		<listener class-name="com.concerto.common.listeners.CustomReporter"></listener>
+		<!--listener class-name="com.concerto.common.listeners.AnnotationTransformer"></listener -->
+		<listener class-name="com.concerto.common.listeners.ListenerAdapter"></listener>
+	</listeners>
+
+
+
+	<test name="House keeping" preserve-order="true">
+		<parameter name="Browser" value="Chrome" />
+		<parameter name="RunEnv" value="localhost" />
+		<parameter name="GRID_HUB_IP" value="10.10.11.83" />
+		<parameter name="Port" value="4444" />
+		<groups>
+			<run>
+				<include name="UI" />
+			</run>
+		</groups>
+		<classes>
+
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.AddHKPool" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.EditHKPool" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.DeleteHKPool" />
+
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.AllocateSite" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.SwitchSite" />
+
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.AddSchedule" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.EditHKSchedule" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.DeleteHkschedule" />
+
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.HKMonitoring" />
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.HKreport" />
+
+			<class name="com.concerto.cams.test.scenarios.HouseKeeping.DeallocateMonitoredSites" />
+
+		</classes>
+	</test>
+</suite>

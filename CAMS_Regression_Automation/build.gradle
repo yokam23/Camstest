@@ -1,0 +1,98 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'CAMS_Regression_Automation'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.4"
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'io.qameta.allure'
+apply plugin: 'war'  
+
+allure {
+    version = '2.4.1'
+    aspectjweaver = true
+    autoconfigure = true
+    resultsDir = file('build/allure-results')
+    reportDir = file('build/allure-results')
+        useTestNG {
+       version = '2.0-BETA10'   
+    }
+    downloadLink = 'https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.1.1/allure-2.1.1.zip'
+    }
+
+
+compileJava {
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+}
+
+
+
+repositories {
+     mavenCentral()   
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+repositories {
+        
+     maven { url "testdata" }
+}
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.141.59'
+    //compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.11.0'
+    compile group: 'io.appium', name: 'java-client', version:'4.1.2'
+    compile group: 'org.apache.poi', name: 'poi', version:'3.17'
+    compile group: 'org.apache.poi', name: 'poi-ooxml', version:'3.17'
+    compile group: 'net.sourceforge.jexcelapi', name: 'jxl', version:'2.6.10'
+    compile group: 'com.relevantcodes', name: 'extentreports', version:'2.41.2'
+    compile group: 'com.google.guava', name: 'guava', version:'23.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.24'
+    compile group: 'net.sourceforge.jtds', name: 'jtds', version: '1.3.1'
+    compile group: 'com.ibm.informix', name: 'jdbc', version: '4.10.9'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
+    compile group: 'javax.mail', name: 'mail', version: '1.4.7'
+//    compile group: 'com.google.guava', name: 'guava', version: '19.0'
+    compile group: 'com.beust', name: 'jcommander', version: '1.72'
+    compile group: 'net.sf.supercsv', name: 'super-csv', version:'2.1.0'
+    compile group: 'io.rest-assured', name: 'json-path', version:'3.0.0'
+    compile group: 'io.rest-assured', name: 'xml-path', version:'3.0.3'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version:'1.1'
+    compile group: 'org.json', name: 'json', version:'20170516'
+    compile group: 'org.testng', name: 'testng', version:'6.14.3'
+    compile group: 'org.jooq', name: 'joor', version:'0.9.7'
+    compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8'
+    compile group: 'commons-net', name: 'commons-net', version: '3.3'
+    compile group: 'org.apache.commons', name: 'commons-vfs2', version: '2.0'
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version:'3.0.3'
+    testCompile group: 'io.rest-assured', name: 'json-schema-validator', version:'3.0.3'
+    testCompile group: 'io.rest-assured', name: 'spring-mock-mvc', version:'3.0.3'
+    testCompile group: 'io.rest-assured', name: 'scala-support', version:'3.0.3'
+    testCompile group: 'com.jayway.restassured', name: 'rest-assured', version:'1.6'
+    testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+}
+
+ext{
+    if (!project.hasProperty('suiteFile')) {
+        suiteFile = 'VegaaH_Reports.xml'
+    }
+}
+
+test{
+	useTestNG(){
+	dependsOn cleanTest
+ 		suites suiteFile
+ 	}
+}
